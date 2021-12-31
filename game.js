@@ -103,7 +103,6 @@ function stateChanged() {
         document.getElementById('question').focus();
         document.getElementById('answer-field').value = null;
     }
-    console.info(state);
 }
 
 function onInput() {
@@ -149,7 +148,7 @@ function americanise() {
     for (let language of languages) {
         if (language === 'en-US') {
             isAmerican = true;
-            break; //
+            break;
         }
         if (language.startsWith('en-')) {
             return; // First english region was not en-US, no need to americanise
