@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quick Maths</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<noscript>This page requires Javascript</noscript>
+<h1><a id="title" href="https://youtu.be/3M_5oYU-IsU?t=63">Quick Maths</a></h1>
+<main>
+
+    <section id="setup">
+        <form class="centre" onsubmit="event.preventDefault(); setup()">
+            <div>
+                <label for="q-amount">Number of questions:</label>
+                <input id="q-amount" type="number" min="1" max="1000" value="5" required/>
+            </div>
+            <div>
+                <label for="q-max-size">Order of magnitude:</label>
+                <input id="q-max-size" type="number" min="10" max="100000" value="10" step="10" required/>
+            </div>
+            <button id="btn-setup" type="submit">Start!</button>
+        </form>
+    </section>
+
+    <section id="qa" class="hidden">
+        <form class="centre" onsubmit="event.preventDefault();onInput()">
+            <label id="question" for="answer-field"></label>
+            <input id="answer-field" type="number"/>
+        </form>
+    </section>
+
+    <section id="results" class="hidden">
+        <h2 id="r-summary"><span id="r-correct">0</span>/<span id="r-total">5</span> correct (<span id="r-perc">5</span>%)</h2>
+        <ol id="r-list"></ol>
+        <button onclick="init()">Play again</button>
+    </section>
+
+</main>
+<script src="game.js" type="application/javascript"></script>
+</body>
+</html>
