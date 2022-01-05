@@ -7,6 +7,13 @@ html, body {
     color: white;
 }
 
+main {
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 20px;
+    margin: 10px;
+}
+
 h1 {
     width: 100%;
     text-align: center;
@@ -34,6 +41,7 @@ button {
     border: none;
     padding: 5px;
     cursor: pointer;
+    border-radius: 25px;
 }
 
 button:hover {
@@ -71,6 +79,11 @@ section > * {
 
 #question {
     font-size: x-large;
+}
+
+.row {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .hidden {
